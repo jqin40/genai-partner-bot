@@ -8,7 +8,7 @@ class SecEdgar:
         self.tickerdict = {}
 
         headers = {'user-agent': 'MLT JQ jayquin89@gmail.com'}
-        r = requests.get(self.fileurl, headers=headers)
+        r = requests.get(self.fileurl, headers=headers, timeout=10)
 
         self.filejson = r.json()
         # print(r.text)
